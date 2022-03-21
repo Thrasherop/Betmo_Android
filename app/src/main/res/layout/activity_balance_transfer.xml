@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/betmoBlack"
+    tools:context=".BalanceTransfer">
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="102dp"
+        android:layout_height="69dp"
+        android:background="@color/betmoOrange"
+        android:ems="10"
+        android:inputType="number"
+        android:text="00"
+        android:textAlignment="center"
+        android:textColor="@color/betmoBlack"
+        android:textSize="25pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.474" />
+
+    <TextView
+        android:id="@+id/meganBalanceDisp"
+        android:layout_width="164dp"
+        android:layout_height="30dp"
+        android:background="@color/betmoOrange"
+        android:text="Loading balances..."
+        android:textColor="@color/betmoBlack"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <TextView
+        android:id="@+id/joshBalanceDisp"
+        android:layout_width="168dp"
+        android:layout_height="32dp"
+        android:background="@color/betmoOrange"
+        android:text="Loading balances..."
+        android:textColor="@color/betmoBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meganBalanceDisp"
+        app:layout_constraintVertical_bias="0.112" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="112dp"
+        android:layout_height="63dp"
+        android:background="@color/betmoOrange"
+        android:text="Transfer above balance"
+        android:textColor="@color/betmoBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintVertical_bias="0.315" />
+</androidx.constraintlayout.widget.ConstraintLayout>

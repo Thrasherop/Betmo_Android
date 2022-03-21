@@ -21,16 +21,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-          TODO:
-            Add a way to load in the logged in user. Probably just save to a file if it exists
-            Add a log out button.
-         */
-
-        FileOutputStream outputStream;
-
-//        String fileName = "test_save.txt";
-//        String data = "ahhh";
 
         // Checks if user is logged in
         if (getBaseContext().getFileStreamPath(Configs.currentUserSaveFile).exists()){
@@ -48,10 +38,23 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 // Checks for megans name
-                if (temp.toUpperCase().contains(Configs.MeganName))
+                if (temp.toUpperCase().contains(Configs.MeganName.toUpperCase())){
+                    Log.d("Login", "Megan was logged in");
+
+                    Configs.currentUser = Configs.MeganName;
+                } else if (temp.toUpperCase().contains(Configs.JoshName.toUpperCase())){
+                    Log.d("Login", "Josh was logged in");
+
+                    Configs.currentUser = Configs.JoshName;
+                } else {
+                    Log.wtf("Login", "Login file is invalid. Opening Login screen");
+
+                    Intent i = new Intent(this, LoginScreen.class);
+                    startActivity(i);
+                }
 
                 //tv.setText(temp);
-                Log.d("Login", "Data: " + temp);
+                Log.d("Login", "User Data:" + temp);
                 Toast.makeText(getBaseContext(), "User data read", Toast.LENGTH_SHORT).show();
 
                 // Switches to main menu screen
@@ -76,6 +79,27 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    public void gotoLoginPage(View v){
+
+        Log.d("Login", "MainActivity: Go to login page button pressed ");
+
+        Intent i = new Intent(this, LoginScreen.class);
+        startActivity(i);
+
+    }
+
+
+
+
+
+
+
+
+    /*
+      Functions that were used during development that are all depreciated
+     */
+
     public void getBalance(View v){
 
         Log.d("APICall", "Get balance called");
@@ -97,25 +121,6 @@ public class MainActivity extends AppCompatActivity {
         thread.start();
 
     }
-
-    public void gotoLoginPage(View v){
-
-        Log.d("Login", "MainActivity: Go to login page button pressed ");
-
-        Intent i = new Intent(this, LoginScreen.class);
-        startActivity(i);
-
-    }
-
-    
-
-
-
-
-
-    /*
-      Functions that were used during development that are all depreciated
-     */
 
     public void transferBalance(View v){
         Log.d("APICall", "transfer called");

@@ -233,6 +233,20 @@ public class APIConnector {
         return response.getInt("status");
     }
 
+    public static int updateAll() throws Exception{
+
+        try {
+            getCurrentGuesses();
+            getTotalWins();
+            getBalance();
+        } catch (Exception e){
+            Log.d("APICall", "Failed to update data: " + e.toString());
+            return 400;
+        }
+
+        return 200;
+    }
+
 
     private static JSONObject sendRequest(String endpointURL, String requestBody) throws Exception {
 
