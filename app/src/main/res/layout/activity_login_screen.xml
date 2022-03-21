@@ -5,37 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/betmoBlack"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="136dp"
-        android:layout_height="30dp"
-        android:background="@color/betmoOrange"
-        android:text="Betmo"
-        android:textAlignment="center"
-        android:textColor="@color/betmoBlack"
-        android:textSize="50px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        app:layout_constraintVertical_bias="0.082" />
+    tools:context=".LoginScreen">
 
     <Button
-        android:id="@+id/gotoLoginPageBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/meganLoginBtn"
+        android:layout_width="168dp"
+        android:layout_height="60dp"
         android:background="@color/betmoOrange"
-        android:onClick="gotoLoginPage"
-        android:text="Go to login page"
+        android:onClick="meganLogin"
+        android:text="Log in as Megan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.248" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.243" />
 
+    <Button
+        android:id="@+id/joshLoginBtn"
+        android:layout_width="155dp"
+        android:layout_height="58dp"
+        android:background="@color/betmoOrange"
+        android:onClick="joshLogin"
+        android:text="Login as Josh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meganLoginBtn"
+        app:layout_constraintVertical_bias="0.358" />
 </androidx.constraintlayout.widget.ConstraintLayout>
