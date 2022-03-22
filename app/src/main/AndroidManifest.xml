@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BalanceTransfer"></activity>
+        <activity android:name=".Submissions"></activity>
+        <activity android:name=".BalanceTransfer" />
         <activity android:name=".AccountsScreen" />
         <activity android:name=".LoginScreen" />
         <activity android:name=".MainMenu" />

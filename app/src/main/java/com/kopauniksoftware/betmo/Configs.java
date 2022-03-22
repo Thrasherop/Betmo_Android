@@ -42,6 +42,7 @@ public class Configs {
     public static String updateTransferComplete = "Transfer Complete";
     public static String updateTransferInProgress = "Transfering...";
     public static String updateTransferFailed = "Transfer failed: ";
+    public static String updateInsufficientFunds = "Insufficient Funds";
 
 
 

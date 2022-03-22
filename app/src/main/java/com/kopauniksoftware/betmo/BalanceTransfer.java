@@ -61,6 +61,22 @@ public class BalanceTransfer extends AppCompatActivity {
         Log.d("Transfer", "Transfer balance called");
         updateDisp.setText(Configs.updateTransferInProgress);
 
+        // Verifies sufficient funds exist
+        if (Configs.currentUser.contains(Configs.MeganName)) {
+            if (Integer.parseInt(amountInput.getText().toString()) > Configs.meganBalance) {
+                Toast.makeText(getBaseContext(), "Insufficient funds", Toast.LENGTH_LONG).show();
+                updateDisp.setText(Configs.updateInsufficientFunds);
+                return;
+            }
+        } else {
+            if (Integer.parseInt(amountInput.getText().toString()) > Configs.joshBalance){
+                Toast.makeText(getBaseContext(), "Insufficient funds", Toast.LENGTH_LONG).show();
+                updateDisp.setText(Configs.updateInsufficientFunds);
+                return;
+            }
+        }
+
+
         // Gets the amount from the input
         try {
 
