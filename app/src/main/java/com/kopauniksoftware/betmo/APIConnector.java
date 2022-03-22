@@ -36,43 +36,6 @@ public class APIConnector {
 
         return response.getInt("status");
 
-//        URL url = new URL(Configs.transferAddr);
-//        HttpURLConnection http = (HttpURLConnection) url.openConnection();
-//        http.setRequestMethod("POST");
-//        http.setDoOutput(true);
-//        http.setRequestProperty("Content-Type", "application/json");
-//
-//        String data = "{\"from\": \"" + from +"\", \"to\": \"" + to +"\", \"amount\": " + amount + " }";
-//
-//        byte[] out = data.getBytes(StandardCharsets.UTF_8);
-//
-//        OutputStream stream = http.getOutputStream();
-//        stream.write(out);
-//
-//        BufferedReader br = null;
-//        if (http.getResponseCode() == 200) {
-//            br = new BufferedReader(new InputStreamReader(http.getInputStream()));
-//            String strCurrentLine;
-//            String finalstr = "finalStr is still default???";
-//            while ((strCurrentLine = br.readLine()) != null) {
-//                //System.out.println(strCurrentLine);
-//                finalstr = strCurrentLine;
-//            }
-//
-//            Log.d("APICall", http.getResponseCode() + " " + http.getResponseMessage());
-//            http.disconnect();
-//
-//            Log.d("APICall", finalstr);
-//
-//
-//            JSONObject transferResponse = new JSONObject(finalstr);
-//            Log.d("APICall", "Transfer resposne: ");
-//            Log.d("APICall", transferResponse.toString());
-//            Log.d("APICall", transferResponse.getString("message"));
-
-
-//            return lastString;
-        //}
     }
 
     public static int getBalance() throws Exception {

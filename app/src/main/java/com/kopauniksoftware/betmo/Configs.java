@@ -45,6 +45,17 @@ public class Configs {
     public static String updateInsufficientFunds = "Insufficient Funds";
 
 
+    // Submit screen configs
+    public static String updateGuessSubmitComplete = "Guess submission complete";
+    public static String updateGuessSubmitFailed = "Guess submission failed: ";
+
+    public static String updateFinalSubmitComplete = "Final score submitted";
+    public static String updateFinalFailed = "Failed to submit final score: ";
+
+    public static String updateSubmitInProgress = "Submitting...";
+    public static String updateSubmitFailedGeneral = "Submission Failed: ";
+
+
 
 
 
