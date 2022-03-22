@@ -61,7 +61,6 @@ public class AccountsScreen extends AppCompatActivity {
                         // it worked
                         sendUpdatesToScreen();
                     } else {
-                        // Something failed
 
                         //Toast.makeText(getBaseContext(), "Could not update info", Toast.LENGTH_LONG).show();
                         Log.d("APICall", "could not update info");
