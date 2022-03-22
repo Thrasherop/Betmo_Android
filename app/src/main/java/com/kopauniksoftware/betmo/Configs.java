@@ -20,7 +20,7 @@ public class Configs {
     public static String JoshName = "Josh";
     public static String MeganName = "Megan";
 
-    // Acccount data holders
+    // Account data holders
     public static int meganBalance = -69;
     public static int joshBalance = -69;
 
@@ -34,6 +34,14 @@ public class Configs {
 
     public static String currentUser = JoshName;
 
+
+    // Transfer screen configs
+    public static String meganBalanceMessage = "Megan's balance: ";
+    public static String joshBalanceMessage = "Josh's balance: ";
+
+    public static String updateTransferComplete = "Transfer Complete";
+    public static String updateTransferInProgress = "Transfering...";
+    public static String updateTransferFailed = "Transfer failed: ";
 
 
 

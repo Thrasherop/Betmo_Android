@@ -64,10 +64,11 @@ public class MainActivity extends AppCompatActivity {
             catch(Exception e){
 
                 Log.d("Login", "Couldn't load in currentUser");
+                Toast.makeText(getBaseContext(), "Couldn't load current user. Sending you to login", Toast.LENGTH_LONG).show();
 
+                // Sends user to login
+                gotoLoginPage(null);
             }
-
-
 
         } else {
 
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void transferBalance(View v){
+    public void transferBalanceFoo(View v){
         Log.d("APICall", "transfer called");
 
 

@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/welcomeTextView"
-        android:layout_width="136dp"
-        android:layout_height="30dp"
+        android:layout_width="122dp"
+        android:layout_height="28dp"
         android:background="@color/betmoOrange"
         android:text="Betmo"
         android:textAlignment="center"
@@ -27,22 +27,22 @@
 
     <Button
         android:id="@+id/gotoLoginPageBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="122dp"
+        android:layout_height="46dp"
         android:background="@color/betmoOrange"
         android:onClick="gotoAccounts"
         android:text="Accounts"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
-        app:layout_constraintVertical_bias="0.248" />
+        app:layout_constraintVertical_bias="0.19" />
 
     <Button
         android:id="@+id/transferBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="122dp"
+        android:layout_height="46dp"
         android:background="@color/betmoOrange"
         android:onClick="gotoTransfer"
         android:text="Transfer funds"
@@ -55,8 +55,8 @@
 
     <Button
         android:id="@+id/submitGuessBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="122dp"
+        android:layout_height="46dp"
         android:background="@color/betmoOrange"
         android:text="Submit Guess"
         app:layout_constraintBottom_toBottomOf="parent"

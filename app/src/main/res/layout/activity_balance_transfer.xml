@@ -8,13 +8,13 @@
     tools:context=".BalanceTransfer">
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/transferAmountInput"
         android:layout_width="102dp"
         android:layout_height="69dp"
         android:background="@color/betmoOrange"
         android:ems="10"
         android:inputType="number"
-        android:text="00"
+        android:text="0"
         android:textAlignment="center"
         android:textColor="@color/betmoBlack"
         android:textSize="25pt"
@@ -23,7 +23,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.474" />
+        app:layout_constraintVertical_bias="0.466" />
 
     <TextView
         android:id="@+id/meganBalanceDisp"
@@ -32,18 +32,17 @@
         android:background="@color/betmoOrange"
         android:text="Loading balances..."
         android:textColor="@color/betmoBlack"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintVertical_bias="0.222" />
 
     <TextView
         android:id="@+id/joshBalanceDisp"
-        android:layout_width="168dp"
-        android:layout_height="32dp"
+        android:layout_width="164dp"
+        android:layout_height="30dp"
         android:background="@color/betmoOrange"
         android:text="Loading balances..."
         android:textColor="@color/betmoBlack"
@@ -52,19 +51,48 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/meganBalanceDisp"
-        app:layout_constraintVertical_bias="0.112" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="112dp"
-        android:layout_height="63dp"
+        android:layout_width="117dp"
+        android:layout_height="58dp"
         android:background="@color/betmoOrange"
+        android:onClick="transferBalance"
         android:text="Transfer above balance"
         android:textColor="@color/betmoBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
-        app:layout_constraintVertical_bias="0.315" />
+        app:layout_constraintTop_toBottomOf="@+id/transferAmountInput"
+        app:layout_constraintVertical_bias="0.306" />
+
+    <TextView
+        android:id="@+id/updateDisp"
+        android:layout_width="159dp"
+        android:layout_height="47dp"
+        android:background="@color/betmoOrange"
+        android:text="No updates :)"
+        android:textAlignment="center"
+        android:textColor="@color/betmoBlack"
+        app:layout_constraintBottom_toTopOf="@+id/meganBalanceDisp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mainMenuBtn"
+        android:layout_width="117dp"
+        android:layout_height="58dp"
+        android:background="@color/betmoOrange"
+        android:onClick="gotoMainMenu"
+        android:text="Main Menu"
+        android:textAlignment="center"
+        android:textColor="@color/betmoBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.124" />
 </androidx.constraintlayout.widget.ConstraintLayout>

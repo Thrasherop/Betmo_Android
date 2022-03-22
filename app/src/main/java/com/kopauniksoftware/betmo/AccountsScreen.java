@@ -65,6 +65,8 @@ public class AccountsScreen extends AppCompatActivity {
                     }
                 } catch (Exception e){
                     Log.d("APICall", "Failed to submit final score: " + e.toString());
+                    Toast.makeText(getBaseContext(), "Failed to submit final score: " + e.toString(), Toast.LENGTH_LONG).show();
+
                 }
             }
         });
