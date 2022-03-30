@@ -196,6 +196,17 @@ public class APIConnector {
         return response.getInt("status");
     }
 
+    public static int submitManual(int meganDelta, int joshDelta, boolean includeWins) throws Exception{
+
+        String data = "{\"delta_josh\": " + String.valueOf(joshDelta) +", \"delta_megan\": " + String.valueOf(meganDelta) +", \"include_wins\": " + String.valueOf(includeWins) + " }";
+        Log.d("APICall", "Sending request...");
+        JSONObject response = sendRequest(Configs.manual_submissionAddr, data);
+
+
+
+        return response.getInt("status");
+    }
+
     public static int updateAll() throws Exception{
 
         try {
@@ -234,6 +245,8 @@ public class APIConnector {
         String data = requestBody; //"{\"from\": \"" + from +"\", \"to\": \"" + to +"\", \"amount\": " + amount + " }";
 
         byte[] out = data.getBytes(StandardCharsets.UTF_8);
+
+        Log.d("APICall", "Here");
 
         OutputStream stream = http.getOutputStream();
         stream.write(out);

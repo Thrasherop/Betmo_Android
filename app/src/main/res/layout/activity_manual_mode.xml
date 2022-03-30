@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/joshQuantityDisp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/betmoBlack"
+    tools:context=".ManualMode">
+
+    <TextView
+        android:id="@+id/updateDisp"
+        android:layout_width="159dp"
+        android:layout_height="47dp"
+        android:background="@color/betmoOrange"
+        android:text="No updates :)"
+        android:textAlignment="center"
+        android:textColor="@color/betmoBlack"
+        app:layout_constraintBottom_toTopOf="@+id/joshAmountDisp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <TextView
+        android:id="@+id/meganDataView"
+        android:layout_width="207dp"
+        android:layout_height="128dp"
+        android:background="@color/betmoOrange"
+        android:text="Loading data..."
+        android:textAlignment="center"
+        android:textColor="@color/betmoBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174" />
+
+    <TextView
+        android:id="@+id/joshDataView"
+        android:layout_width="207dp"
+        android:layout_height="128dp"
+        android:background="@color/betmoOrange"
+        android:text="Loading data..."
+        android:textAlignment="center"
+        android:textColor="@color/betmoBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="104dp"
+        android:layout_height="46dp"
+        android:background="@color/betmoOrange"
+        android:onClick="submit"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805" />
+
+    <Button
+        android:id="@+id/mainMenuBtn"
+        android:layout_width="104dp"
+        android:layout_height="46dp"
+        android:background="@color/betmoOrange"
+        android:onClick="gotoMainMenu"
+        android:text="Main Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitBtn"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <TextView
+        android:id="@+id/joshAmountDisp"
+        android:layout_width="57dp"
+        android:layout_height="44dp"
+        android:background="@color/betmoOrange"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joshDataView"
+        app:layout_constraintVertical_bias="0.452" />
+
+    <TextView
+        android:id="@+id/meganAmountDisp"
+        android:layout_width="57dp"
+        android:layout_height="44dp"
+        android:background="@color/betmoOrange"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/joshDataView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meganDataView" />
+
+    <Button
+        android:id="@+id/meganIncreaseBtn"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@color/betmoOrange"
+        android:onClick="meganIncrease"
+        android:text="+"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/meganAmountDisp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toEndOf="@+id/meganAmountDisp"
+        app:layout_constraintTop_toTopOf="@+id/meganAmountDisp" />
+
+
+    <Button
+        android:id="@+id/meganDecreaseBtn"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@color/betmoOrange"
+        android:onClick="meganDecrease"
+        android:text="-"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/meganAmountDisp"
+        app:layout_constraintEnd_toStartOf="@+id/meganAmountDisp"
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/meganAmountDisp" />
+
+
+    <Button
+        android:id="@+id/joshIncreaseBtn"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="116dp"
+        android:background="@color/betmoOrange"
+        android:onClick="joshIncrease"
+        android:text="+"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/joshAmountDisp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toEndOf="@+id/joshAmountDisp"
+        app:layout_constraintTop_toBottomOf="@+id/joshDataView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/joshDecreaseBtn"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="116dp"
+        android:background="@color/betmoOrange"
+        android:onClick="joshDecrease"
+        android:text="-"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/joshAmountDisp"
+        app:layout_constraintEnd_toStartOf="@+id/joshAmountDisp"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joshDataView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/modeBtn"
+        android:layout_width="89dp"
+        android:layout_height="46dp"
+        android:background="@color/betmoOrange"
+        android:textSize="10dp"
+        android:onClick="toggleMode"
+        android:text="Loading..."
+        app:layout_constraintBottom_toTopOf="@+id/meganDataView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

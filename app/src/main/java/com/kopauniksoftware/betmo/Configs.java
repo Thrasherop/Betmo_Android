@@ -11,6 +11,7 @@ public class Configs {
     public static String submitFinalScoreAddr = baseAPIAddr + "/submit_final_score";
     public static String getCurrentGuessAddr = baseAPIAddr + "/get_current_guesses";
     public static String getTotalWinsAddr = baseAPIAddr + "/get_total_wins";
+    public static String manual_submissionAddr = baseAPIAddr + "/manual_submission";
 
 
     // Config related config
@@ -55,8 +56,11 @@ public class Configs {
     public static String updateSubmitInProgress = "Submitting...";
     public static String updateSubmitFailedGeneral = "Submission Failed: ";
 
-
-
+    // Manual mode configs
+    public static String justBalanceString = "Just balances mode";
+    public static String doTotalWinsStr = "Both mode";
+    public static String manualFailed = "Submission failed: ";
+    public static String manualSucceeded = "Submission complete";
 
 
 }

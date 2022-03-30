@@ -54,4 +54,11 @@ public class MainMenu extends AppCompatActivity {
         Intent i = new Intent(this, Submissions.class);
         startActivity(i);
     }
+
+    public void gotoManualMode(View v){
+        Log.d("Login", "Switching to manual mode screen");
+
+        Intent i = new Intent(this, ManualMode.class);
+        startActivity(i);
+    }
 }

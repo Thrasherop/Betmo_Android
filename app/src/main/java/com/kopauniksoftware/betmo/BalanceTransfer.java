@@ -10,8 +10,6 @@ import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 public class BalanceTransfer extends AppCompatActivity {
 
     TextView meganBalanceDisp;
@@ -27,7 +25,7 @@ public class BalanceTransfer extends AppCompatActivity {
         setContentView(R.layout.activity_balance_transfer);
 
         // Assigns instance attributes
-        meganBalanceDisp = findViewById(R.id.meganBalanceDisp);
+        meganBalanceDisp = findViewById(R.id.joshAmountDisp);
         joshBalanceDisp = findViewById(R.id.joshBalanceDisp);
         amountInput = findViewById(R.id.transferAmountInput);
         updateDisp = findViewById(R.id.updateDisp);
